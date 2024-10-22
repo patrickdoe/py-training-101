@@ -120,9 +120,9 @@ All classes have a function called __init__(), which is always executed when the
 Use the __init__() function to assign values to object properties, such as:
 ```
 class Person:
-  def __init__(self, name, age):    # Arguments
-    self.name = name                # Value to object property
-    self.age = age                  # Value to object property
+  def __init__(self, name, age):    # __init__() function = the contructor, and is the initializationmethod of the class.
+    self.name = name                # Instance attributes
+    self.age = age                  # Instance attributes
 
 p1 = Person("John", 36)
 
@@ -166,11 +166,11 @@ Object Methods:
 Objects can contain <mark>methods</mark> which are functions that belong to the object.
 ```
 class Person:                                  # Class
-  def __init__(self, name, age):
-    self.name = name
-    self.age = age
+  def __init__(self, name, age):               # Contructor and initializationmethod of the class
+    self.name = name                           # Instance attributes
+    self.age = age                             # Instance attributes
 
-  def myfunc(self):                            # Method 
+  def myfunc(self):                            # A method belonging to the class "Person"
     print("Hello my name is " + self.name)
 
 p1 = Person("John", 36)                        # Object
