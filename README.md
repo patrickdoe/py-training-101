@@ -157,9 +157,9 @@ class Person:
   def __str__(self):
     return f"{self.name}({self.age})"
 
-p1 = Person("John", 36)    # Prints "John(36)"
+p1 = Person("John", 36)
 
-print(p1)
+print(p1)                  # Prints "John(36)"
 ```
 
 Object Methods:   
@@ -175,4 +175,26 @@ class Person:                                  # Class
 
 p1 = Person("John", 36)                        # Object
 p1.myfunc()                                    # Method is executed through the p1 object
+```
+
+#### enumerate() Function:
+The enumerate() function adds a counter to the items in the list, allowing you to iterate through both the index and the item at the same time.
+```
+x = ('apple', 'banana', 'cherry')
+y = enumerate(x)                                # Prints "[(0, 'apple'), (1, 'banana'), (2, 'cherry')]"
+```
+Enumerate syntax: enumerate(iterable, start)   
+(Default start index is 0 if nothing else is specified.)
+
+#### Lambda:
+A lambda function is a small anonymous function that can take any number of arguments, but can only have one expression.
+Often used in simple cases where defining a full function would be overkill such as inside functions like; map(), filter(), or sorted()).
+```
+# List of tuples (name, age)
+people = [("Alice", 25), ("Bob", 30), ("Charlie", 20)]
+
+# Sort by the second element (age)
+sorted_people = sorted(people, key=lambda person: person[1])
+
+print(sorted_people)                    # Prints "[('Charlie', 20), ('Alice', 25), ('Bob', 30)]"
 ```
